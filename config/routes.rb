@@ -14,6 +14,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
 
-  # root "application#hello"
+  root "application#hello"
   
 end

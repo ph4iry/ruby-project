@@ -27,6 +27,7 @@ threads threads_count, threads_count
 rails_env = ENV.fetch("RAILS_ENV", "development")
 environment rails_env
 
+
 case rails_env
 when "production"
   # If you are running more than 1 thread per process, the workers count
@@ -49,6 +50,8 @@ port ENV.fetch("PORT", 3000)
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
+
+plugin :tailwindcss if ENV.fetch("RAILS_ENV", "development") == "development"
 
 # Only use a pidfile when requested
 pidfile ENV["PIDFILE"] if ENV["PIDFILE"]
