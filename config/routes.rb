@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'welcome', to: 'pages#home'
 
   get 'day-1', to: "pages#show"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -16,6 +15,6 @@ Rails.application.routes.draw do
   # root "posts#index"
 
 
-  root "application#hello"
+  root "pages#home"
   
 end
